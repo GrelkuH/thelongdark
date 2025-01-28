@@ -26,7 +26,7 @@ Install "FSWatcherEngineEvent" powershell module first
 install-Module -Name FSWatcherEngineEvent
 ```
 
-## 1. Before Starting Game edit appropriate path to steam directory and backup files directory
+## 1. Before Starting Game edit appropriate paths to steam directory and backup files directory
 ```
 # Custom Variables 
     $sourcedir = 'C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\'
