@@ -48,8 +48,8 @@ If you want to clear Event Watcher immediately
     $sourcefilename = 'sandbox1'    
     $destpath   = 'C:\Backup\autosave\'
     $sourcepath = $sourcedir + $sourecfilename
-
-#List Backup Directory files (check modified timestamp)
+```
+#List Source and Backup Directory files (check modified timestamp)
 ```
 Get-ChildItem -Path $destpath
 Get-ChildItem -Path $sourcedir    
