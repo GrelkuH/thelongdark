@@ -6,7 +6,7 @@
 ####                                       ###### 
 #################################################
 
-Every time when the source file changed the script run action block with copy file plus additional timstamp to user's backup directory  
+#Every time when the source file changed the script run action block with copy file plus additional timstamp to user's backup directory  
 
 
 ##0. Run Once - prerequisites
@@ -21,7 +21,7 @@ install-Module -Name FSWatcherEngineEvent
     $sourcedir = 'C:\Users\Admin\AppData\Local\Hinterland\TheLongDark\Survival\'
     $sourecfilename = 'sandbox1'    
     $destpath   = 'D:\1\autosave\'
-#
+
     $sourcepath = $sourcedir + $sourecfilename
 
     $sb = {Copy-Item -Path $sourcepath -Destination ($destpath + $sourecfilename + '_'+ (Get-Date -f dd.MM_HH-mm-ss))}
