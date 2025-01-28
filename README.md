@@ -1,7 +1,7 @@
 # The Long Dark - autosave (Powershell)
                                     
    
-Every time when the source file changed the script run action block with copy file plus additional timstamp to user's backup directory  
+Every time when the source file changed the script run action block with copy file plus additional timstamp in the name to user's backup directory  
 
 You have two option for running script:
 1. Run code at Powershell ISE.
