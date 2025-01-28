@@ -13,9 +13,9 @@ You have two option for running script:
  
    Create autosave taskLibrary with properties below:
 
-   Program/script: powershell.exe
+       Program/script: powershell.exe
    
-   Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -File "C:\youpath\autosave.ps1"
+       Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -File "C:\youpath\autosave.ps1"
 
 Source filename can be different "sandbox" or "challenge" with number. You can check it from your steam save directory C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\
 
