@@ -11,3 +11,5 @@
 
     Register-EngineEvent -SourceIdentifier "MyEvent" -Action $sb
     New-FileSystemWatcher -SourceIdentifier "MyEvent" -Path $sourcedir -NotifyFilter LastWrite -Filter $sourecfilename
+
+#while ($true) {sleep 1}
