@@ -1,6 +1,7 @@
 # The Long Dark - autosave (Powershell)
                                     
-   
+![Screenshot](/main.jpg)  
+ 
 Every time when the source file changed the script run action block with copying file with additional timestamp in the filename to user's backup directory  
 
 You have two option for running script:
