@@ -13,12 +13,11 @@ You have two option for running script:
    Save block #1 to .ps1 file or get autosave.ps1 from repo. 
  
    Create autosave taskLibrary with properties below:
-
-       Program/script: powershell.exe
+    Program/script: powershell.exe
    
-       Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -Nologo -File "C:\youpath\autosave.ps1"
+    Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -Nologo -File "C:\youpath\autosave.ps1"
    
-P.S. If you have an issue with -Noexit key try to uncomment the last string with - while ($true) {sleep 1}
+    P.S. If you have an issue with -Noexit key try to uncomment the last string with - while ($true) {sleep 1}
 
 Source filename can be different "sandbox" or "challenge" with number. You can check it from your steam save directory C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\
 
