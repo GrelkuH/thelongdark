@@ -13,6 +13,7 @@ You have two option for running script:
    Save block #1 to .ps1 file or get autosave.ps1 from repo. 
  
    Create autosave taskLibrary with properties below:
+   
     Program/script: powershell.exe
    
     Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -Nologo -File "C:\youpath\autosave.ps1"
