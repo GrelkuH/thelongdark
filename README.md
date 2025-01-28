@@ -5,10 +5,17 @@ Every time when the source file changed the script run action block with copy fi
 
 You have two option for running script:
 1. Run code at Powershell ISE.
+   
    Select and Run Appropriate Block with F8 
-3. Save block #1 to .ps1 file and create task in TaskScheduler Library with properties below:
+2. Create autosave task 
+
+   Save block #1 to .ps1 file or get autosave.ps1 from repo. 
+ 
+   Create autosave taskLibrary with properties below:
+
    Program/script: powershell.exe
-   Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -File "C:\youpath\youfile.ps1"
+   
+   Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -File "C:\youpath\autosave.ps1"
 
 Source filename can be different "sandbox" or "challenge" with number. You can check it from your steam save directory C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\
 
@@ -19,7 +26,7 @@ Install "FSWatcherEngineEvent" powershell module first
 install-Module -Name FSWatcherEngineEvent
 ```
 
-## 1. Before starting game edit appropriate path to steam directory and backup files directory
+## 1. Before Starting Game edit appropriate path to steam directory and backup files directory
 ```
 # Custom Variables 
     $sourcedir = 'C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\'
