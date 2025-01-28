@@ -2,12 +2,16 @@
                                     
    
 Every time when the source file changed the script run action block with copy file plus additional timstamp to user's backup directory  
+
 You have two option for running script:
 1. Run code at Powershell ISE.
    Select and Run Appropriate Block with F8 
 3. Save block #1 to .ps1 file and create task in TaskScheduler Library with properties below:
    Program/script: powershell.exe
    Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -File "C:\youpath\youfile.ps1"
+
+Source filename can be different "sandbox" or "challenge" with number/ You can check from the steam 
+
 
 ## 0. Run Once - prerequisites
 Install "FSWatcherEngineEvent" powershell module first
@@ -19,18 +23,19 @@ install-Module -Name FSWatcherEngineEvent
 ```
 # Custom Variables 
     $sourcedir = 'C:\Users\Admin\AppData\Local\Hinterland\TheLongDark\Survival\'
-    $sourecfilename = 'sandbox1'    
+    $sourcefilename = 'sandbox1'    
     $destpath   = 'D:\1\autosave\'
 
     $sourcepath = $sourcedir + $sourecfilename
 
-    $sb = {Copy-Item -Path $sourcepath -Destination ($destpath + $sourecfilename + '_'+ (Get-Date -f dd.MM_HH-mm-ss))}
+    $sb = {Copy-Item -Path $sourcepath -Destination ($destpath + $sourcefilename + '_'+ (Get-Date -f dd.MM_HH-mm-ss))}
 
     Register-EngineEvent -SourceIdentifier "MyEvent" -Action $sb
     New-FileSystemWatcher -SourceIdentifier "MyEvent" -Path $sourcedir -NotifyFilter LastWrite -Filter $sourecfilename
 ```
 
-## 2. After End Game
+## 2. After End Game (optional)
+If you want to clear Event Watcher immediately
 ``` 
     Remove-FileSystemWatcher -SourceIdentifier MyEvent
     Get-EventSubscriber| Unregister-Event
@@ -41,9 +46,9 @@ install-Module -Name FSWatcherEngineEvent
 ```
 # Custom Variables run before restore
     $sourcedir = 'C:\Users\Admin\AppData\Local\Hinterland\TheLongDark\Survival\'
-    $sourecfilename = 'sandbox1'    
+    $sourcefilename = 'sandbox1'    
     $destpath   = 'D:\1\autosave\'
-    $sourcepath = $sourcedir + $sourecfilename
+    $sourcepath = $sourcedir + $sourcefilename
 
 #List Backup Directory files (check modified timestamp)
 ```
