@@ -10,7 +10,7 @@ You have two option for running script:
    Program/script: powershell.exe
    Add arguments (optional): -ExecutionPolicy Bypass -NonInteractive -WindowStyle Hidden -Noexit -File "C:\youpath\youfile.ps1"
 
-Source filename can be different "sandbox" or "challenge" with number/ You can check from the steam 
+Source filename can be different "sandbox" or "challenge" with number. You can check it from your steam save directory C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\
 
 
 ## 0. Run Once - prerequisites
@@ -22,10 +22,9 @@ install-Module -Name FSWatcherEngineEvent
 ## 1. Before starting game edit appropriate path to steam directory and backup files directory
 ```
 # Custom Variables 
-    $sourcedir = 'C:\Users\Admin\AppData\Local\Hinterland\TheLongDark\Survival\'
+    $sourcedir = 'C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\'
     $sourcefilename = 'sandbox1'    
-    $destpath   = 'D:\1\autosave\'
-
+    $destpath   = 'C:\Backup\autosave\'
     $sourcepath = $sourcedir + $sourecfilename
 
     $sb = {Copy-Item -Path $sourcepath -Destination ($destpath + $sourcefilename + '_'+ (Get-Date -f dd.MM_HH-mm-ss))}
@@ -45,10 +44,10 @@ If you want to clear Event Watcher immediately
 ## 3. Restore (run appropriate string or copy file to source directory manually)
 ```
 # Custom Variables run before restore
-    $sourcedir = 'C:\Users\Admin\AppData\Local\Hinterland\TheLongDark\Survival\'
+    $sourcedir = 'C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\'
     $sourcefilename = 'sandbox1'    
-    $destpath   = 'D:\1\autosave\'
-    $sourcepath = $sourcedir + $sourcefilename
+    $destpath   = 'C:\Backup\autosave\'
+    $sourcepath = $sourcedir + $sourecfilename
 
 #List Backup Directory files (check modified timestamp)
 ```
