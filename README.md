@@ -36,12 +36,12 @@ install-Module -Name FSWatcherEngineEvent
     $sourcedir = 'C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\'
     $sourcefilename = 'sandbox1'    
     $destpath   = 'C:\Backup\autosave\'
-    $sourcepath = $sourcedir + $sourecfilename
+    $sourcepath = $sourcedir + $sourcefilename
 
     $sb = {Copy-Item -Path $sourcepath -Destination ($destpath + $sourcefilename + '_'+ (Get-Date -f dd.MM_HH-mm-ss))}
 
     Register-EngineEvent -SourceIdentifier "MyEvent" -Action $sb
-    New-FileSystemWatcher -SourceIdentifier "MyEvent" -Path $sourcedir -NotifyFilter LastWrite -Filter $sourecfilename
+    New-FileSystemWatcher -SourceIdentifier "MyEvent" -Path $sourcedir -NotifyFilter LastWrite -Filter $sourcefilename
 ```
 
 ## 2. After End Game (optional)
@@ -58,7 +58,7 @@ If you want to clear Event Watcher immediately
     $sourcedir = 'C:\Users\*username*\AppData\Local\Hinterland\TheLongDark\Survival\'
     $sourcefilename = 'sandbox1'    
     $destpath   = 'C:\Backup\autosave\'
-    $sourcepath = $sourcedir + $sourecfilename
+    $sourcepath = $sourcedir + $sourcefilename
 ```
 #List Source and Backup Directory files (check modified timestamp)
 ```
